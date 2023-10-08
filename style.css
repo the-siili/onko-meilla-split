@@ -39,7 +39,7 @@ body{
 .header {
     overflow: hidden;
     background-color: var(--header-footer-color);
-    padding: 10px;
+    padding: 30px;
 }
 
 .header img {
@@ -60,29 +60,27 @@ body{
 /* Search Content */
 
 .searchDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    padding-bottom: 220px;
+
     background-color: var(--form-div-background);
     background-image: var(--background-texture);
     background-repeat: repeat;
 
-
-    width: 400px;
-    height: 600px;
-    margin: 5% auto;
     border-style: var(--border-style);
     border-radius: 5px;
     border-color: var(--border-color);
-    padding-top: 20px;
-    
 }
 
-.searchDiv p {
-    margin: auto;
-    width: 30%;
-    margin-top: 50px;
 
+.searchDiv p {
     text-align: center;
     color: var(--text-color);
-    font-size: 34px;
+    font-size: 32px;
     font-weight: 700;
 
     background-color: var(--form-element-color);
@@ -98,13 +96,11 @@ body{
     border-color: var(--border-color);
 }
 
-.searchForm {
-    margin: auto;
-    width: 50%;
-    margin-top: 70px;
-}
+.searchDiv select {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
 
-.searchForm select {
     font-size: x-large;
     font-weight: 700;
     text-align: center;
@@ -113,6 +109,7 @@ body{
     background-color: var(--form-element-color);
     /*background-image: var(--background-texture);*/
     position: relative;
+    
     width: 200px;
     height: 75px;
 
@@ -125,11 +122,15 @@ body{
     transition: all 0.2s;
 }
 
-.searchForm select:hover {
+.searchDiv select:hover {
     background-color: var(--select-hover-color);
 }
 
-.searchForm button {
+.searchDiv button {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+
     font-weight: 700;
     text-align: center;
     font-size: large;
@@ -151,22 +152,22 @@ body{
     transition: all 0.2s;
 }
 
-.searchForm button:hover {
+.searchDiv button:hover {
     background-color: var(--button-hover-color);
 }
 
-.searchForm button:active {
+.searchDiv button:active {
     background-color: var(--button-active-color);
-    transform: translateY(4px)
+    transform: translate(-50%, 4px)
 }
 
-.resultDiv{
-    margin: auto;
-    width: 100%;
-    text-align: center;
-}
+.searchDiv label{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
 
-.resultDiv label{
+    margin-top: 120px;
+
     font-size: 50px;
     font-weight: 700;
     text-align: center;
@@ -195,20 +196,20 @@ body{
     padding: 0px;
 }
 
-.footerLogos{
+.icons {
     margin-left: 20px;
 }
 
-.footerLogos {
+.icons {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(44deg) brightness(104%) contrast(101%);
     transition: all 0.2s;
 }
 
-.footerLogos:hover{
+.icons:hover{
     filter: invert(100%) sepia(2%) saturate(6355%) hue-rotate(189deg) brightness(118%) contrast(75%);
 }
 
-.footerLogos:active{
+.icons:active{
     filter: invert(74%) sepia(10%) saturate(0%) hue-rotate(221deg) brightness(92%) contrast(101%);
 }
 
@@ -233,10 +234,11 @@ body{
     background: rgba(255, 255, 255, 1);
     width: 400px;
     padding: 2em 2em;
-    border-radius: 4px;
+    border-radius: 10px;
 }
 
 .content h1{
+    color: tomato;
     text-align: center;
     margin: 0px;
 }
@@ -244,7 +246,22 @@ body{
 .content p{
     text-decoration: none;
     text-align: center;
-    font-weight: lighter;
+    font-weight: 400;
+    font-size: large;
+    color: gray;
+}
+
+.content b{
+    color: rgb(41, 41, 41);
+}
+
+.content a{
+    text-decoration: none;
+    color:cornflowerblue;
+}
+
+.content:visited{
+    color: inherit;
 }
 
 .modal:target {
@@ -256,7 +273,11 @@ body{
     position: absolute;
     top: 0;
     right: 15px;
-    color: #fe0606;
     text-decoration: none;
     font-size: 30px;
+    transition: all 0.2s;
+}
+
+.closeInfo:active {
+    color: black;
 }

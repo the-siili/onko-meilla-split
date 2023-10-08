@@ -10,7 +10,7 @@ let normals = ""
 
 let all_courses = ""
 
-let today = "Friday"
+let today = ""
 
 
 myCourse = "oppitunti"
@@ -25,8 +25,7 @@ function Init() {
     days.forEach((day,index)=>{
         // Check if the index of day value is equal to the returned value of getDay()
         if(index == new Date().getDay()){
-            ///today = day;
-            console.log(today)
+            today = day;
         }
     });
 
@@ -47,7 +46,7 @@ function CheckDay()
     if(today == "Saturday" || today == "Sunday")
     {
 
-        console.log("EI koulua")
+        document.getElementById('resultLbl').innerHTML = "EI KOULUA";
         return
     }
 
@@ -98,8 +97,6 @@ function AddCourseToOptions(item)
     opt.value = item;
     opt.innerHTML = item;
     select.appendChild(opt);
-    
-    console.log(item)
 }
 
 
