@@ -46,7 +46,7 @@ function CheckDay()
     if(today == "Saturday" || today == "Sunday")
     {
 
-        document.getElementById('resultLbl').innerHTML = "EI KOULUA";
+        document.getElementById('resultLbl').innerHTML = "VKLP!";
         return
     }
 
