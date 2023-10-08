@@ -64,7 +64,7 @@ body{
 }
 
 
-.searchDiv p {
+.searchDivp {
     text-align: center;
     color: var(--text-color);
     font-size: 30px;
@@ -82,6 +82,17 @@ body{
     border-color: var(--border-color);
 }
 
+.ohjeTxt{
+    text-align: center;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 700;
+
+    border-width: 2px;
+    border-radius: 10px;
+    border-style: var(--border-style);
+    border-color: var(--border-color);
+}
 
 .searchDiv select {
     position: absolute;
