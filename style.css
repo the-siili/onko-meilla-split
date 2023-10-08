@@ -13,8 +13,6 @@
     --button-color: rgba(145, 205, 255, 0.3);
     --button-hover-color: rgba(145, 205, 255, 1);
     --button-active-color: rgb(96, 77, 104);
-
-    --background-texture: url(none);
 }
 
 
@@ -32,6 +30,7 @@ body{
     background-repeat:no-repeat;
     background-image: url(imgs/generic_art.png);
     margin: 0px;
+    padding: 0px; 
 }
 
 /* Website Header */
@@ -39,22 +38,12 @@ body{
 .header {
     overflow: hidden;
     background-color: var(--header-footer-color);
-    padding: 30px;
+    height: 70px;
 }
 
 .header img {
     border-radius: 5px;
     vertical-align: middle;
-}
-
-.header a {
-    text-decoration: none;
-    color: var(--text-color);
-    vertical-align: middle;
-    margin-left: 20px;
-    font-size: 45px;
-    font-weight: 700;
-    text-shadow: 4px 4px 4px black;
 }
 
 /* Search Content */
@@ -68,9 +57,7 @@ body{
     padding-bottom: 220px;
 
     background-color: var(--form-div-background);
-    background-image: var(--background-texture);
-    background-repeat: repeat;
-
+    
     border-style: var(--border-style);
     border-radius: 5px;
     border-color: var(--border-color);
@@ -80,11 +67,10 @@ body{
 .searchDiv p {
     text-align: center;
     color: var(--text-color);
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 700;
 
     background-color: var(--form-element-color);
-    /* background-image: var(--background-texture); */
     width: 300px;
     padding: 20px;
     padding-top: 30px;
@@ -95,6 +81,7 @@ body{
     border-style: var(--border-style);
     border-color: var(--border-color);
 }
+
 
 .searchDiv select {
     position: absolute;
@@ -107,7 +94,6 @@ body{
     color: var(--text-color);
 
     background-color: var(--form-element-color);
-    /*background-image: var(--background-texture);*/
     position: relative;
     
     width: 200px;
@@ -137,7 +123,6 @@ body{
     color: var(--text-color);
 
     background-color: var(--button-color);
-    /*background-image: var(--background-texture);*/
     margin-top: 50px;
     margin-bottom: 50px;
     width: 200px;
@@ -177,15 +162,13 @@ body{
 /* Website Footer */
 
 .footer {
-    overflow: hidden;
-    position : absolute;
-    bottom : 0;
-    height : 40px;
-    padding-bottom: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     background-color: var(--header-footer-color);
     text-decoration: none;
     width: 100%;
-    padding-bottom: 30px;
 }
 
 .footer li, ul {
@@ -198,9 +181,6 @@ body{
 
 .icons {
     margin-left: 20px;
-}
-
-.icons {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(44deg) brightness(104%) contrast(101%);
     transition: all 0.2s;
 }
@@ -235,6 +215,12 @@ body{
     width: 400px;
     padding: 2em 2em;
     border-radius: 10px;
+}
+
+@media only screen and (max-width: 400px) {
+    .content{
+        width: 300px;
+    }
 }
 
 .content h1{

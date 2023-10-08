@@ -70,7 +70,7 @@ function dataToDayLists(ind){
 function showResult(){
     if(splits.includes(myCourse))
     {
-        document.getElementById('resultLbl').innerHTML = "SPLITTI";
+        document.getElementById('resultLbl').innerHTML = "SPLIT";
     }
     else if(normals.includes(myCourse))
     {
