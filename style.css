@@ -65,6 +65,7 @@ body{
 
 
 .searchDivp {
+    display: block;
     left: 50%;
     text-align: center;
     color: var(--text-color);
