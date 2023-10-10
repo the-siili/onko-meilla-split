@@ -50,18 +50,23 @@ function nextDay()
 
 
 function changeDay(){
+
     select.innerHTML="";
     CheckDay();
     all_courses.forEach(AddCourseToOptions)
-
+    
 
     if(today == "Saturday" || today == "Sunday")
     {
         select.innerHTML="";
+        document.getElementById('resultLbl').innerHTML="VKLP!";
+    }
+    else{
+        document.getElementById('resultLbl').innerHTML="?";
     }
 
     document.getElementById('dayLbl').innerHTML=fin_days[days.indexOf(today)];
-    document.getElementById('resultLbl').innerHTML="?";
+    
 }
 
 
@@ -125,6 +130,14 @@ function dataToDayLists(ind){
 
 
 function showResult(){
+
+    if(today == "Saturday" || today == "Sunday")
+    {
+        return
+    }
+
+
+
     if(splits.includes(myCourse))
     {
         document.getElementById('resultLbl').innerHTML = "SPLIT";
