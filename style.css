@@ -94,11 +94,32 @@ body{
     border-color: var(--border-color);
 }
 
-.searchDiv select {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
+.flexwrap-justify{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 
+.dayArrows{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    font-size: 50px;
+    color: var(--text-color);
+}
+
+.dayArrows:hover{
+    color: var(--button-hover-color);
+}
+
+.dayArrows:active{
+    color: rgb(91, 91, 253);
+}
+
+.searchDiv select {
     font-size: x-large;
     font-weight: 700;
     text-align: center;
@@ -123,7 +144,18 @@ body{
     background-color: var(--select-hover-color);
 }
 
-.searchDiv button {
+.dayLabel{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+
+    text-align: center;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.resultButton {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
@@ -148,16 +180,16 @@ body{
     transition: all 0.2s;
 }
 
-.searchDiv button:hover {
+.resultButton:hover {
     background-color: var(--button-hover-color);
 }
 
-.searchDiv button:active {
+.resultButton:active {
     background-color: var(--button-active-color);
     transform: translate(-50%, 4px)
 }
 
-.searchDiv label{
+.resultLabel{
     position: absolute;
     left: 50%;
     transform: translate(-50%);
@@ -204,6 +236,14 @@ body{
     filter: invert(74%) sepia(10%) saturate(0%) hue-rotate(221deg) brightness(92%) contrast(101%);
 }
 
+.tueLink {
+    text-decoration: underline;
+    font-weight: bold;
+    margin-left: 20px;
+    transition: all 0.2s;
+}
+
+
 /* Info Popup */
 
 .modal {
@@ -231,6 +271,10 @@ body{
 @media only screen and (max-width: 400px) {
     .content{
         width: 300px;
+    }
+
+    .searchDivp{
+        width: 270px;
     }
 }
 

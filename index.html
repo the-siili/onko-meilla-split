@@ -14,19 +14,26 @@
     <!-- Button and search -->
     <div class="searchDiv">
             <p class="searchDivp">Onko Meillä Split?</p>
-            <p class="ohjeTxt">11.15-12.55 Oppitunti?</p>
-            <select name="search" id="dd" onchange="setMyCourse()">
-                <option value="none" selected disabled hidden>Valitse</option> 
-            </select>
+            <p class="ohjeTxt">11.15-12.55 oppitunti</p>
+            <div class="flexwrap-justify">
+                <button class="dayArrows" id="leftBtn" onclick="lastDay()">←</button>
+                <select name="search" id="dd" onchange="setMyCourse()">
+                    <option value="none" selected disabled hidden>Valitse</option> 
+                </select>
+                <button class="dayArrows" id="rightBtn" onclick="nextDay()">→</button>
+            </div>
             <br>
-            <button onclick="showResult()" type="button">ETSI</button>
-            <label for="result" id="resultLbl"> </label>
+            <label class="dayLabel" for="currentDay" id="dayLbl">päivä</label>
+            <br>
+            <button onclick="showResult()" type="button" class="resultButton">ETSI</button>
+            <label for="result" id="resultLbl" class="resultLabel"> </label>
     </div>
 
     <div class="footer">
         <ul>
             <a href="https://github.com/the-siili/onko-meilla-split" target="_blank"><li><img class="icons" src="imgs/icons/githubIcon.svg" alt="GitHub" height="40px" width="40px"></li></a>
             <a href="#openInfo"><li><img class="icons" src="imgs/icons/infoIcon.svg" alt="info" height="40px" width="40px"></li></a>
+            <a href="https://mobilepay.fi/box?id=21b554df-69e7-4eb0-8592-455636ecbb11&phone=6132NK&v=vx1" target="_blank"><li><p class="tueLink">TUE MEITÄ</p></li></a>
         </ul>
     </div>
 
