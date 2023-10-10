@@ -61,7 +61,7 @@ function changeDay(){
     }
 
     document.getElementById('dayLbl').innerHTML=fin_days[days.indexOf(today)];
-
+    document.getElementById('resultLbl').innerHTML="?";
 }
 
 
@@ -82,6 +82,7 @@ function Init() {
     CheckDay()
     all_courses.forEach(AddCourseToOptions)
     document.getElementById('dayLbl').innerHTML=fin_days[days.indexOf(today)];
+    document.getElementById('resultLbl').innerHTML="?";
 }
 window.onload = Init;
 
