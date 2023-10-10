@@ -107,7 +107,7 @@ body{
     cursor: pointer;
     overflow: hidden;
     outline: none;
-    font-size: 50px;
+    font-size: xx-large;
     color: var(--text-color);
 }
 
