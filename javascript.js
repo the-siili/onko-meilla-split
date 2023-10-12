@@ -66,7 +66,7 @@ function changeDay(){
     }
 
     document.getElementById('dayLbl').innerHTML=fin_days[days.indexOf(today)];
-    
+    loadCourse()
 }
 
 
@@ -88,6 +88,7 @@ function Init() {
     all_courses.forEach(AddCourseToOptions)
     document.getElementById('dayLbl').innerHTML=fin_days[days.indexOf(today)];
     document.getElementById('resultLbl').innerHTML="?";
+    loadCourse()
 }
 window.onload = Init;
 
@@ -146,6 +147,7 @@ function showResult(){
     {
         document.getElementById('resultLbl').innerHTML = "NORMAALI";
     }
+    saveCurrentCourse()
 }
 
 
@@ -174,4 +176,17 @@ function setMyCourse()
 
     myCourse = document.getElementById('dd').value;
 
+}
+
+
+function saveCurrentCourse()
+{
+    localStorage.setItem(today, select.value);
+    console.log(select.value)
+}
+
+function loadCourse()
+{
+    select.value = localStorage.getItem(today)
+    console.log(localStorage.getItem(today))
 }
