@@ -183,10 +183,12 @@ function saveCurrentCourse()
 {
     localStorage.setItem(today, select.value);
     console.log(select.value)
+    
 }
 
 function loadCourse()
 {
     select.value = localStorage.getItem(today)
     console.log(localStorage.getItem(today))
+    setMyCourse()
 }
