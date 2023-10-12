@@ -175,6 +175,7 @@ function setMyCourse()
 {
 
     myCourse = document.getElementById('dd').value;
+    document.getElementById('resultLbl').innerHTML = "?";
 
 }
 
