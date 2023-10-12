@@ -189,6 +189,12 @@ function saveCurrentCourse()
 
 function loadCourse()
 {
+    if(today == "Saturday" || today == "Sunday")
+    {
+        return
+    }
+
+
     select.value = localStorage.getItem(today)
     console.log(localStorage.getItem(today))
     setMyCourse()
