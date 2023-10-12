@@ -191,4 +191,5 @@ function loadCourse()
     select.value = localStorage.getItem(today)
     console.log(localStorage.getItem(today))
     setMyCourse()
+    showResult()
 }
