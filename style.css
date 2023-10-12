@@ -152,6 +152,10 @@ body{
     background-color: var(--select-hover-color);
 }
 
+.searchDiv select option {
+    background-color: black;
+}
+
 .dayLabel{
     text-align: center;
     color: var(--text-color);
