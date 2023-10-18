@@ -247,12 +247,19 @@ function getMenuData(){
 
 function displayMenuData()
 {
+    
+
+
     document.getElementById("menu_list").innerHTML = ""
 
     var a = JSON.parse(menu)
     menu_arr = a["menu-data"][today].split(";");
 
     console.log(menu_arr)
+
+
+    document.getElementById("menu_week").innerHTML = a["menu-data"]["Week"]
+
 
     for (i in menu_arr)
     {
