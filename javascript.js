@@ -21,6 +21,18 @@ var select = document.getElementById('dd');
 
 
 
+
+let menu = []
+
+
+
+
+let can_continue = false
+
+
+
+
+
 function lastDay()
 {
     today = days[days.indexOf(today) - 1]
@@ -67,6 +79,7 @@ function changeDay(){
 
     document.getElementById('dayLbl').innerHTML=fin_days[days.indexOf(today)];
     loadCourse()
+    displayMenuData()
 }
 
 
@@ -89,6 +102,7 @@ function Init() {
     document.getElementById('dayLbl').innerHTML=fin_days[days.indexOf(today)];
     document.getElementById('resultLbl').innerHTML="?";
     loadCourse()
+    getMenuData()
 }
 window.onload = Init;
 
@@ -199,4 +213,50 @@ function loadCourse()
     console.log(localStorage.getItem(today))
     setMyCourse()
     showResult()
+}
+
+
+
+
+
+
+
+
+//HANDLING MENU
+function getMenuData(){
+
+    //GETTING MENU DATA
+    fetch('https://ksyk-menu-scraper.onrender.com/').then(function (response) 
+    {
+        // The API call was successful!
+        return response.text();
+    }).then(function (html) {
+
+        menu = html
+        displayMenuData()
+        
+
+
+    }).catch(function (err) {
+        // There was an error
+        console.warn('Something went wrong1.', err);
+    });
+
+}
+
+
+function displayMenuData()
+{
+    document.getElementById("menu_list").innerHTML = ""
+
+    var a = JSON.parse(menu)
+    menu_arr = a["menu-data"][today].split(";");
+
+    console.log(menu_arr)
+
+    for (i in menu_arr)
+    {
+        document.getElementById("menu_list").innerHTML += menu_arr[i] + "<br />"
+    }
+
 }
