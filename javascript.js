@@ -102,7 +102,9 @@ function Init() {
     document.getElementById('dayLbl').innerHTML=fin_days[days.indexOf(today)];
     document.getElementById('resultLbl').innerHTML="?";
     loadCourse()
+    menu = localStorage.getItem("menu")
     getMenuData()
+    
 }
 window.onload = Init;
 
@@ -197,7 +199,6 @@ function setMyCourse()
 function saveCurrentCourse()
 {
     localStorage.setItem(today, select.value);
-    console.log(select.value)
     
 }
 
@@ -210,7 +211,6 @@ function loadCourse()
 
 
     select.value = localStorage.getItem(today)
-    console.log(localStorage.getItem(today))
     setMyCourse()
     showResult()
 }
@@ -233,6 +233,7 @@ function getMenuData(){
     }).then(function (html) {
 
         menu = html
+        localStorage.setItem("menu", html);
         displayMenuData()
         
 
@@ -248,14 +249,10 @@ function getMenuData(){
 function displayMenuData()
 {
     
-
-
     document.getElementById("menu_list").innerHTML = ""
 
     var a = JSON.parse(menu)
     menu_arr = a["menu-data"][today].split(";");
-
-    console.log(menu_arr)
 
 
     document.getElementById("menu_week").innerHTML = a["menu-data"]["Week"]
