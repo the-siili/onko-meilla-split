@@ -252,7 +252,7 @@ function displayMenuData()
     document.getElementById("menu_list").innerHTML = ""
 
     var a = JSON.parse(menu)
-    menu_arr = a["menu-data"][today].split(";");
+    var menu_arr = a["menu-data"][today].split(";");
 
 
     document.getElementById("menu_week").innerHTML = a["menu-data"]["Week"]
