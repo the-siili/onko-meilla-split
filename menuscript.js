@@ -74,8 +74,8 @@ function create_food_element(name, diet, macro_element, type){
                 <p class="card-text ruoka-kortti">
                   Rasva
                 </p>
-                <p class="card-text ruoka-kortti" style="text-indent: 0.5vh;">
-                  Tyydyttynyt rasva
+                <p class="card-text ruoka-kortti" style="text-indent: 0.5vh; ">
+                  Tyydyttynyt
                 </p>
                 <p class="card-text ruoka-kortti">
                   Hiilihydraatit
