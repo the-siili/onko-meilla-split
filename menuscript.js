@@ -52,7 +52,7 @@ function create_food_element(name, diet, macro_element, type){
       </button>
     </h2>
     <div id="${element_id}" class="accordion-collapse collapse" data-bs-parent="#${type}">
-      <div class="accordion-body">
+      <div class="accordion-body" style="padding-left: 0vh; padding-right: 0vh;">
         <div class="card fs-6">
           <div class="card-header text-start container bg-body-secondary">
             <div class="row">

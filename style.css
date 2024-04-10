@@ -39,7 +39,13 @@ body{
     background-color: var(--header-footer-color);
 }
 
-/* Search Content */
+/* Website Footer */
+
+.footer {
+    background-color: var(--header-footer-color);
+}
+
+/* SPLIT UI */
 
 .searchDiv {
     height: 60%;
@@ -193,32 +199,4 @@ body{
 
 .ruoka-kortti{
     line-height: 0.4;
-}
-
-/* Website Footer */
-
-.footer {
-    background-color: var(--header-footer-color);
-}
-
-
-.icons {
-    margin-left: 20px;
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(44deg) brightness(104%) contrast(101%);
-    transition: all 0.2s;
-}
-
-.icons:hover{
-    filter: invert(100%) sepia(2%) saturate(6355%) hue-rotate(189deg) brightness(118%) contrast(75%);
-}
-
-.icons:active{
-    filter: invert(74%) sepia(10%) saturate(0%) hue-rotate(221deg) brightness(92%) contrast(101%);
-}
-
-.tueLink {
-    text-decoration: underline;
-    font-weight: bold;
-    margin-left: 20px;
-    transition: all 0.2s;
 }
