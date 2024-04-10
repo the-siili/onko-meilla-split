@@ -202,7 +202,7 @@ function set_macro(name, macro_list){
         return `${macro_list[name]["amount"]} ${macro_list[name]["unit"]}`
     }
     catch{
-        return "none"
+        return "ei tiedossa"
     }
 }
 
@@ -249,7 +249,7 @@ function open_next_day(){
     document.getElementById("day_label").innerHTML = day_list_finnish[day_list.indexOf(day)]
     render_day()
     }
-    
+
     else{
       day = day_list[0]
       document.getElementById("day_label").innerHTML = day_list_finnish[day_list.indexOf(day)]
