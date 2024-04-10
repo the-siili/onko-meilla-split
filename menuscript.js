@@ -249,6 +249,12 @@ function open_next_day(){
     document.getElementById("day_label").innerHTML = day_list_finnish[day_list.indexOf(day)]
     render_day()
     }
+    
+    else{
+      day = day_list[0]
+      document.getElementById("day_label").innerHTML = day_list_finnish[day_list.indexOf(day)]
+      render_day()
+    }
 }
 
 function open_previous_day(){
@@ -256,5 +262,10 @@ function open_previous_day(){
     day = day_list[day_list.indexOf(day) - 1]
     document.getElementById("day_label").innerHTML = day_list_finnish[day_list.indexOf(day)]
     render_day()
+    }
+    else{
+      day = day_list[4]
+      document.getElementById("day_label").innerHTML = day_list_finnish[day_list.indexOf(day)]
+      render_day()
     }
 }
