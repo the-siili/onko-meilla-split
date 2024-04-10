@@ -103,7 +103,6 @@ function Init() {
     document.getElementById('resultLbl').innerHTML="?";
     loadCourse()
     menu = localStorage.getItem("menu")
-    getMenuData()
     
 }
 window.onload = Init;

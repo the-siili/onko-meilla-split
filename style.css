@@ -36,14 +36,7 @@ body{
 /* Website Header */
 
 .header {
-    overflow: hidden;
     background-color: var(--header-footer-color);
-    height: 70px;
-}
-
-.header img {
-    border-radius: 5px;
-    vertical-align: middle;
 }
 
 /* Search Content */
@@ -198,25 +191,16 @@ body{
     color: var(--text-color);
 }
 
+.ruoka-kortti{
+    line-height: 0.4;
+}
+
 /* Website Footer */
 
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
     background-color: var(--header-footer-color);
-    text-decoration: none;
-    width: 100%;
 }
 
-.footer li, ul {
-    float: left;
-    color: var(--text-color);
-    text-align: center;
-    list-style: none;
-    padding: 0px;
-}
 
 .icons {
     margin-left: 20px;
@@ -237,84 +221,4 @@ body{
     font-weight: bold;
     margin-left: 20px;
     transition: all 0.2s;
-}
-
-
-/* Info Popup */
-
-.modal {
-    align-items: center;
-    display: flex;
-    justify-content: center; 
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: all 0.4s;
-    visibility: hidden;
-    opacity: 0;
-}
-.content {
-    position: absolute;
-    background: rgba(255, 255, 255, 1);
-    width: 400px;
-    padding: 2em 2em;
-    border-radius: 10px;
-}
-
-@media only screen and (max-width: 400px) {
-    .content{
-        width: 300px;
-    }
-
-    .searchDiv{
-        background-color: rgba(0, 0, 0, 0);
-    }
-}
-
-.content h1{
-    color: tomato;
-    text-align: center;
-    margin: 0px;
-}
-
-.content p{
-    text-decoration: none;
-    text-align: center;
-    font-weight: 400;
-    font-size: large;
-    color: gray;
-}
-
-.content b{
-    color: rgb(41, 41, 41);
-}
-
-.content a{
-    text-decoration: none;
-    color:cornflowerblue;
-}
-
-.content:visited{
-    color: inherit;
-}
-
-.modal:target {
-    visibility: visible;
-    opacity: 1;
-}
-.closeInfo {
-    margin: 10px;
-    position: absolute;
-    top: 0;
-    right: 15px;
-    text-decoration: none;
-    font-size: 30px;
-    transition: all 0.2s;
-}
-
-.closeInfo:active {
-    color: black;
 }
