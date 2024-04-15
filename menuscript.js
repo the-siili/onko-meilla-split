@@ -1,8 +1,8 @@
 
 
 
-const day_list = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-const day_list_finnish = ["Maanantai", "Tiistai", "Keskiviikko", "Torstai", "Perjantai"]
+const day_list = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+const day_list_finnish = ["Sunnuntai", "Maanantai", "Tiistai", "Keskiviikko", "Torstai", "Perjantai", "Lauantai"]
 let day = "Wednesday"
 
 
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     const date = new Date();
-    current_day_Index = date.getDay()-1;
+    current_day_Index = date.getDay();
     if(current_day_Index > 5 || current_day_Index == 0)
     {
         current_day_Index = 5
@@ -122,11 +122,15 @@ function render_day()
     day_menu = menu[day]
 
     //element 1 is the lounas
-    lounas_options = day_menu[1]["Lounas"]
-    kasvis_options = day_menu[0]["Kasvislounas"]
+    console.log(Object.keys(day_menu[1]))
+    console.log(Object.keys(day_menu[0]))
+    lounas_options = day_menu[1][Object.keys(day_menu[1])[0]]
+    kasvis_options = day_menu[0][Object.keys(day_menu[0])[0]]
 
 
     //rendering the lounas options
+    document.getElementById("lounas_lbl").innerHTML = Object.keys(day_menu[1])[0]
+
     for(var i = 0; i < lounas_options.length; i++ ){
 
         lounas_name = lounas_options[i][0]
@@ -138,6 +142,8 @@ function render_day()
 
 
     //rendering the kasvis lounas options
+    document.getElementById("kasvislounas_lbl").innerHTML = Object.keys(day_menu[0])[0]
+
     for(var i = 0; i < kasvis_options.length; i++ ){
 
         kasvislounas_name = kasvis_options[i][0]
@@ -244,27 +250,27 @@ function test(){
 }
 
 function open_next_day(){
-    if(day_list.indexOf(day) <= 3){
+    if(day_list.indexOf(day) < 5){
     day = day_list[day_list.indexOf(day) + 1]
     document.getElementById("day_label").innerHTML = day_list_finnish[day_list.indexOf(day)]
     render_day()
     }
 
     else{
-      day = day_list[0]
+      day = day_list[1]
       document.getElementById("day_label").innerHTML = day_list_finnish[day_list.indexOf(day)]
       render_day()
     }
 }
 
 function open_previous_day(){
-    if(day_list.indexOf(day) >= 1){
+    if(day_list.indexOf(day) > 1){
     day = day_list[day_list.indexOf(day) - 1]
     document.getElementById("day_label").innerHTML = day_list_finnish[day_list.indexOf(day)]
     render_day()
     }
     else{
-      day = day_list[4]
+      day = day_list[5]
       document.getElementById("day_label").innerHTML = day_list_finnish[day_list.indexOf(day)]
       render_day()
     }
