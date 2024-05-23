@@ -121,14 +121,24 @@ function render_day()
 
     day_menu = menu[day]
 
+
+    lounas_options = 0
     //element 1 is the lounas
-    console.log(Object.keys(day_menu[1]))
+    //console.log(Object.keys(day_menu[1]))
     console.log(Object.keys(day_menu[0]))
+    try{
     lounas_options = day_menu[1][Object.keys(day_menu[1])[0]]
+    }
+    catch
+    {
+
+    }
     kasvis_options = day_menu[0][Object.keys(day_menu[0])[0]]
 
 
     //rendering the lounas options
+    if (lounas_options != 0)
+    {
     document.getElementById("lounas_lbl").innerHTML = Object.keys(day_menu[1])[0]
 
     for(var i = 0; i < lounas_options.length; i++ ){
@@ -139,7 +149,7 @@ function render_day()
 
         create_food_element(lounas_name, lounas_diet, retrieve_macros(lounas_options[i][1]["macros"]), "lounaat")
     }
-
+  }
 
     //rendering the kasvis lounas options
     document.getElementById("kasvislounas_lbl").innerHTML = Object.keys(day_menu[0])[0]
