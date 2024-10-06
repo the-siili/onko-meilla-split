@@ -50,8 +50,9 @@ function create_food_element(name, diet, macro_element, type){
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${element_id}" aria-expanded="false" aria-controls="flush-collapseOne">
       ${name} (${diet})
       </button>
-    </h2>
-    <div id="${element_id}" class="accordion-collapse collapse" data-bs-parent="#${type}">
+    </h2>`
+
+  var macro_element_inner = `<div id="${element_id}" class="accordion-collapse collapse" data-bs-parent="#${type}">
       <div class="accordion-body" style="padding-left: 0vh; padding-right: 0vh;">
         <div class="card fs-6">
           <div class="card-header text-start container bg-body-secondary">
@@ -100,6 +101,10 @@ function create_food_element(name, diet, macro_element, type){
     </div>`
     
     
+    if (macro_element != ""){
+      element_inner += macro_element_inner
+    }
+
     container.innerHTML = element_inner
     
     
@@ -144,10 +149,16 @@ function render_day()
     for(var i = 0; i < lounas_options.length; i++ ){
 
         lounas_name = lounas_options[i][0]
+        lounas_diet = ""
+        console.log(lounas_options[i])
+        if (lounas_options[i][1] != null){
         lounas_diet = lounas_options[i][1]["diets"]
-
-
         create_food_element(lounas_name, lounas_diet, retrieve_macros(lounas_options[i][1]["macros"]), "lounaat")
+        }
+        else{
+          create_food_element(lounas_name, lounas_diet, "", "lounaat")
+        }
+        
     }
   }
 
@@ -157,10 +168,16 @@ function render_day()
     for(var i = 0; i < kasvis_options.length; i++ ){
 
         kasvislounas_name = kasvis_options[i][0]
+
+        kasvislounas_diet = ""
+        console.log(kasvis_options[i])
+        if (kasvis_options[i][1] != null){
         kasvislounas_diet = kasvis_options[i][1]["diets"]
-
-
         create_food_element(kasvislounas_name, kasvislounas_diet, retrieve_macros(kasvis_options[i][1]["macros"]), "kasvislounaat")
+        }
+        else{
+          create_food_element(kasvislounas_name, kasvislounas_diet, "", "kasvislounaat")
+        }
     }
 
 
@@ -172,8 +189,10 @@ function render_day()
 
 function retrieve_macros(macro_list){
 
-
-
+  console.log(macro_list)
+  if(macro_list == null){
+    return ""
+  }
     
 
 
