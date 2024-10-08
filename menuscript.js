@@ -41,17 +41,25 @@ function create_food_element(name, diet, macro_element, type){
     container.setAttribute("class", "accordion-item")
     var parent = document.getElementById(type)
     parent.appendChild(container)
+  
+  let element_inner = ""
     
-    
-
-    
-    
-    let element_inner = `<h2 class="accordion-header">
+  if(diet == "") {
+    element_inner = `<h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${element_id}" aria-expanded="false" aria-controls="flush-collapseOne">
+      ${name}
+      </button>
+    </h2>`
+  } else {
+    element_inner = `<h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${element_id}" aria-expanded="false" aria-controls="flush-collapseOne">
       ${name} (${diet})
       </button>
     </h2>`
-
+  }
+    
+    
+   
   var macro_element_inner = `<div id="${element_id}" class="accordion-collapse collapse" data-bs-parent="#${type}">
       <div class="accordion-body" style="padding-left: 0vh; padding-right: 0vh;">
         <div class="card fs-6">
