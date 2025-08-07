@@ -3,7 +3,7 @@ let days = [ "Sunday", "Monday", "Tuesday", "Wednesday","Thursday", "Friday","Sa
 let fin_days = [ "Sunnuntai", "Maanantai", "Tiistai", "Keskiviikko","Torstai", "Perjantai","Lauantai"]
 
 
-let text1 = "lbi02+03.1f POj,lfi01.2f LLa,läi06+07.3 HTe,lhi01.4f SHi,läi04.5 TLy,lyh01.6fe ATa*lmaa08.1f HNo,lmaa11.2f EHä,lmab06+07.2f OHe,lena06.4 PSk,lps01.3f MiV,lena07.6 RKo?lyh01.4f ATa,lmaa02+04.5f HNo,lmaa02+04.6ef LEk,lmab02.2fe JMa,lmaa11.4fe EHä,lena04.1 PSk,lrub06.4 / lrua08.4 MPa*lmaa02+04.2f SSn,lmaa02+04.3f NNu,lps05.2ef LLa,lue05.fe NMä,läi08.5 TLy,lhi03.6ef SHi,li02.8fe JWi?lena04.5 RKo,läi04.6 JJu,ls204 MAl,läi06+07.1 TLy,lena07.2 PAu,lmaa08.3f OHe,lmab06+07.1f JMa*läi04.1 HTe,lbi02+03.2f POj,lyh02.3fe yt VKo,lmaa02+04.4f HNo,lmaa08.4fe SSn,lena07.5 PSk,lmab06+07.3ef LEk?lmaa08.1f HNo,lmaa11.2f EHä,läi06+07.3 HTe,lena06.4 PSk,lena07.6 RKo,lmab06+07.2f OHe*lbi02+03.1f POj,lfi01.2f LLa,lps01.3f MiV,lhi01.4f SHi,läi04.5 TLy,lyh01.6fe ATa?lps05.fe LLa,lhi05.2f SHi,lrub06.2 / lrua08.2 MPa,ls218.o2 MAl,lena04.4tt PSk,läi04.2 HTe,lyh03.5fe VKo*lmaa11.3f SSn,lmaa02+04.1f NNu,lbi02+03.6ef CFr,lbi06.1fe ARa,lyh01.5fe ATa,lena03.3 RKo,lte03.fe02 OVi"
+let text1 = "lhi01.1f ATa,lps01.2f MiV,lmay01A.3f LDe,lge01.4f MMe,lmay01A.5ef HTi,lmay01A.6ef BPu,lfi02.1f LLa,lfi02.6ef EHä*lbi07.1ABI POj,lke07.2ABI HHu,lena09.2ABI PSk,lena09.5ABI RKo,lena09.8ABI PAu,lyh05.1ABI VKo,lrub09.1ABI / lrua09.1ABI MPa,läi05.2 HTe,lena04.3 MHu,lmaa05.4f HNo,läi05.5 TLy?lmay01A.1f HNo,lmay01A.4f NNu,lke07.1ABI HHu,lge05.ABI MMe,lena01+02.2 PSk,lyh01.3f VKo,läi17.1o2 HTe,lue07.ABI / let07.ABI NMä,lhi12.1ABI ATa*lli02.2fe JWi,lmu02.1e MMc,lku02.1f EPe,lfi01.5ef EHä,lps01.6ef LLa,lsaa03 JSn,lfy05.1fe JMa,lbi04.2ef CFr,lhi05.f SHi,lena09.3ABI RKo?lbi01.4f ARa,läi05.1 TLy,lte01.2f OVi,lte01.3f ALa,läi05.4 HTe,lhi02.5ef SHi,läi05.6 JJu,ls205 MAl,lena09.2ABI PSk,lena09.8ABI PAu*lli01.6ef PBo,lmu01.2e TTu,lmu01.5e MMc,lku01.1f EPe,lku01.7ef KEs,lke01+02.3f LDe,lbi07.1ABI POj,lke07.2ABI HHu,lena09.5ABI RKo,lyh05.1ABI VKo,lrub09.1ABI / lrua09.1ABI MPa?lke07.2ABI HHu,lmaa05.4f HNo,lbi07.1ABI POj,lena09.5ABI RKo,lyh05.1ABI VKo,läi05.5 TLy,lena04.3 MHu,lena09.2ABI PSk,lena09.8ABI PAu,lrub09.1ABI / lrua09.1ABI MPa*lhi01.1f ATa,lfi02.6ef EHä,läi05.2 HTe,lps01.2f MiV,lmay01A.3f LDe,lge01.4f MMe,lmay01A.5ef HTi,lmay01A.6ef BPu,lfi02.1f LLa?lrub01+02.1 MPa,lmay01A.2f LDe,lrub01+02.3 JSn,lrua01+02 MiV,let02.2ef LVä,lena09.1ABI RKo,lrab206 / lrab308 / lraa08 IWi,lmab08.1f JMa,lfi05.ABI LLa,lmaa05.3f BPu*lrub01+02.6 PAu,lena09.4ABI PSk,lbi07.2ABI POj,läi01.4 HTe,lmaa05.1f HTi,lmaa13.3ABI HNo,läi01.5 TLy,lss201.1+2 MAl,lue02.3f NMä,lmaa05.5f NNu,lrub04.2 TNu"
 let day_stacks = ""
 
 let splits = ""
@@ -263,3 +263,4 @@ function displayMenuData()
     }
 
 }
+
