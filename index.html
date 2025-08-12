@@ -15,7 +15,7 @@
     <title>Onko Meillä Split?</title> <!-- Specify website title -->
     <link rel="stylesheet" href="style.css"> <!-- Link stylesheet -->
     <link rel="icon" sizes="800x800" href="imgs/wallah.jpg"> <!-- Link website logo -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
 <body>
     <!-- Header for website -->
@@ -71,6 +71,31 @@
 
 
     <!-- Modals -->
+
+    <div class="modal fade" id="bp-popup" tabindex="-1" aria-labelledby="bp-popup" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content text-center">
+            <div class="modal-header bg-body-secondary border border-secondary">
+                <h1 class="modal-title fs-4" id="info_label"><b>BEACH PARTY 2025!!!</b></h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                    <div class="modal-body fs-5 text-secondary">
+                        <p class="fs-6"><b>Beach Party 2025 on tulossa...<br>Lahjoita yhteiseen hyvään!</b></p>
+                        <a href="https://qr.mobilepay.fi/box/8a75284a-9fc0-4e8b-8ced-97735536855d/pay-in" target="_blank" class="btn btn-primary btn-lg bp-button">
+                            Lahjoitukset via MobilePay
+                        </a>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var popUp = new bootstrap.Modal(document.getElementById("bp-popup"));
+            popUp.show();
+        });
+    </script>
+
     <div class="modal fade" id="infoa" tabindex="-1" aria-labelledby="infoa" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content text-center">

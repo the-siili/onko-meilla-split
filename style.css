@@ -45,6 +45,10 @@ body{
     background-color: var(--header-footer-color);
 }
 
+.bp-button {
+    margin-top: 15px;
+}
+
 /* SPLIT UI */
 
 .searchDiv {
