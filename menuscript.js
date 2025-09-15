@@ -108,7 +108,8 @@ function create_food_element(name, diet, macro_element, type, ingredients) {
 
   const accordion_body = `<div id="${element_id}" class="accordion-collapse collapse" data-bs-parent="#${type}">
     <div class="accordion-body" style="padding-left: 0px; padding-right: 0px;">
-      <div class="card fs-6">
+      ${macro_element_wrapper}
+      <div class="card fs-6" style="margin-top: 5px;">
         <div class="card-header text-start container bg-body-secondary">
           <div class="col"><strong>Ainesosat</strong></div>
         </div>
@@ -120,7 +121,7 @@ function create_food_element(name, diet, macro_element, type, ingredients) {
         </div>
       </div>
     
-      ${macro_element_wrapper}
+      
     </div>
   </div>`;
 
@@ -270,7 +271,7 @@ function get_menu_data() {
     })
     .catch(function (err) {
       // There was an error
-      console.warn("Something went wrong1.", err);
+      console.warn("Something went wrong!", err);
     });
 }
 
