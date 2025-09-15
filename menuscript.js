@@ -44,7 +44,7 @@ document.addEventListener(
 );
 
 // type "lounaat" or "kasvislounaat"
-function create_food_element(name, diet, macro_element, type) {
+function create_food_element(name, diet, macro_element, type, ingredients) {
   const element_id = Math.floor(Math.random() * 90000000);
 
   const container = document.createElement("div");
@@ -115,7 +115,7 @@ function create_food_element(name, diet, macro_element, type) {
 
         <div class="card-body container">
           <div class="col">
-           ${ainesosat}
+           ${ingredients}
           </div>
         </div>
       </div>
@@ -164,10 +164,11 @@ function render_day() {
           lounas_name,
           lounas_diet,
           render_macros(lounas_options[i][1]["macros"]),
-          "lounaat"
+          "lounaat",
+          lounas_options[i][1]["ingredients"]
         );
       } else {
-        create_food_element(lounas_name, lounas_diet, "", "lounaat");
+        create_food_element(lounas_name, lounas_diet, "", "lounaat", "ei saatavilla");
       }
     }
   }
@@ -188,14 +189,16 @@ function render_day() {
         kasvislounas_name,
         kasvislounas_diet,
         render_macros(kasvis_options[i][1]["macros"]),
-        "kasvislounaat"
+        "kasvislounaat",
+        kasvis_options[i][1]["ingredients"]
       );
     } else {
       create_food_element(
         kasvislounas_name,
         kasvislounas_diet,
         "",
-        "kasvislounaat"
+        "kasvislounaat",
+        "ei saatavilla",
       );
     }
   }
