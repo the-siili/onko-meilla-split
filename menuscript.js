@@ -24,7 +24,7 @@ document.addEventListener(
   "DOMContentLoaded",
   function () {
     const date = new Date();
-    const day_of_week = date.getDay();
+    let day_of_week = date.getDay();
 
     // Saturday and Sunday to Friday
     if (day_of_week == 6 || day_of_week == 0) {
@@ -38,6 +38,7 @@ document.addEventListener(
 
     //on start set public data from memory, the load new data from website to it
     public_data = JSON.parse(localStorage.getItem("menu_data"));
+    
     get_menu_data();
   },
   false
