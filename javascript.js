@@ -25,8 +25,6 @@ lmaa05.4f NNu	30			lena09.4ABI PAu	23	lena05.6 MHu	33	lraa08/lrab206/lrab308 IWi
 				lke07.2ABI HHu	19			lmab08.1f JMa	28
 									`;
 
-
-
 /**
  * Transposes the given array, swapping columns and rows.
  * @template T
@@ -39,7 +37,9 @@ function transpose(array, def) {
   // Posted by Fawad Ghafoor, modified by community. See post 'Timeline' for change history
   // Retrieved 2026-08-19, License - CC BY-SA 4.0
 
-  return array[0].map((_, colIndex) => array.map((row) => colIndex < row.length ? row[colIndex] : def));
+  return array[0].map((_, colIndex) =>
+    array.map((row) => (colIndex < row.length ? row[colIndex] : def)),
+  );
 }
 
 /**
@@ -50,7 +50,8 @@ function transpose(array, def) {
  * @returns {[T, T][]}
  */
 function zip(array1, array2) {
-  if (array1.length != array2.length) throw new Error(`Lengths inequal: ${array1.length} != ${array2.length}`);
+  if (array1.length != array2.length)
+    throw new Error(`Lengths inequal: ${array1.length} != ${array2.length}`);
 
   return array1.map((val, i) => [val, array2[i]]);
 }
@@ -65,7 +66,7 @@ function parseTSV(text) {
   const columns = transpose(rows, "");
 
   // remove odd indices
-  const daysOfWeek = columns.filter((_, index) => index % 2 === 0)
+  const daysOfWeek = columns.filter((_, index) => index % 2 === 0);
 
   return daysOfWeek;
 }
@@ -75,10 +76,16 @@ const normalDays = parseTSV(normal);
 /** @type {[splitCourses: string[], normalCourses: string[]][]} */
 const dayStacks = zip(splitDays, normalDays);
 
-console.log("Old string format:", dayStacks.map(lunchtimes => lunchtimes.map(courses => courses.join(",")).join("*")).join("?"));
+console.log(
+  "Old string format:",
+  dayStacks
+    .map((lunchtimes) =>
+      lunchtimes.map((courses) => courses.join(",")).join("*"),
+    )
+    .join("?"),
+);
 
-
-
+// Note: Sunday is the first day of week due to Date.getDay()
 const dayNamesEnglish = [
   "Sunday",
   "Monday",
@@ -127,54 +134,48 @@ function nextDay() {
 }
 
 function loadDay() {
-  dataToDayLists();
+  loadDayVariables();
 
-  courseSelect.innerHTML = "";
+  courseSelect.textContent = "";
   allCourses.forEach(addCourseToSelect);
 
-  dayLbl.innerHTML = dayNamesFinnish[chosenDayIdx];
-  loadCourseStorage();
+  dayLbl.textContent = dayNamesFinnish[chosenDayIdx];
+  loadCourseFromStorage();
+  showResult();
 }
 
-window.addEventListener('load', () => {
+window.addEventListener("load", () => {
   chosenDayIdx = new Date().getDay();
   loadDay();
 });
 
-function showUnknownResult() {
-  if (onkoVklp()) {
-    resultLbl.innerHTML = "VKLP!";
-  } else {
-    resultLbl.innerHTML = "?";
-  }
-}
-
-function dataToDayLists() {
-  if (onkoVklp()) {
-    courseSelect.innerHTML = "";
-    return
-  };
+function loadDayVariables() {
   const mondayFirstIndex = (chosenDayIdx + 6) % 7;
 
   let dayStack = dayStacks[mondayFirstIndex];
-  splits = dayStack[0];
-  normals = dayStack[1];
+  splits = dayStack?.[0] ?? [];
+  normals = dayStack?.[1] ?? [];
 
   allCourses = [...splits, ...normals];
 }
 
 function showResult() {
   if (onkoVklp()) {
-    resultLbl.innerHTML = "VKLP!";
-    return;
-  }
-
-  if (courseSelect.value && splits.includes(courseSelect.value)) {
-    resultLbl.innerHTML = "SPLIT";
+    resultLbl.textContent = "VKLP!";
+  } else if (courseSelect.value && splits.includes(courseSelect.value)) {
+    resultLbl.textContent = "SPLIT";
   } else if (courseSelect.value && normals.includes(courseSelect.value)) {
-    resultLbl.innerHTML = "NORMAALI";
+    resultLbl.textContent = "NORMAALI";
   } else {
-    resultLbl.innerHTML = "?";
+    resultLbl.textContent = "?";
+  }
+}
+
+function showUnknownResult() {
+  if (onkoVklp()) {
+    resultLbl.textContent = "VKLP!";
+  } else {
+    resultLbl.textContent = "?";
   }
 }
 
@@ -183,23 +184,20 @@ function addCourseToSelect(item) {
     return;
   }
 
-  var opt = document.createElement("option");
+  let opt = document.createElement("option");
   opt.value = item;
-  opt.innerHTML = item;
+  opt.textContent = item;
   courseSelect.appendChild(opt);
 }
 
-function saveCourseStorage() {
-  localStorage.setItem(dayNamesEnglish[chosenDayIdx], courseSelect.value);
+function saveCourseToStorage() {
+  if (!onkoVklp())
+    localStorage.setItem(dayNamesEnglish[chosenDayIdx], courseSelect.value);
 }
 
-function loadCourseStorage() {
-  if (onkoVklp()) {
-    return;
-  }
-
-  courseSelect.value = localStorage.getItem(dayNamesEnglish[chosenDayIdx]);
-  showResult();
+function loadCourseFromStorage() {
+  if (!onkoVklp())
+    courseSelect.value = localStorage.getItem(dayNamesEnglish[chosenDayIdx]);
 }
 
 function courseSelectHandler() {
@@ -208,5 +206,5 @@ function courseSelectHandler() {
 
 function showHandler() {
   showResult();
-  saveCourseStorage();
+  saveCourseToStorage();
 }
