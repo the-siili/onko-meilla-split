@@ -58,11 +58,6 @@ function renderDay() {
   const menu = parsedData["Menu"];
   const packages = menu[day].flatMap((val) => Object.entries(val));
 
-  // Swap the first two packages (e.g. kasvislounas and lounas)
-  if (packages.length > 1) {
-    [packages[0], packages[1]] = [packages[1], packages[0]];
-  }
-
   const packagesElem = document.getElementById("meal_packages");
   packagesElem.innerText = ""; // Empty the menu
   packages.forEach(([packageName, meals]) => {
@@ -133,7 +128,7 @@ function renderMeal(name, diet, macroHtml, parentElem, ingredients) {
     <div class="card-header text-start container bg-body-secondary">
       <div class="row">
         <div class="col text-start">
-          <b>Ravintosisältö</b> 
+          <b>Ravintosisältö</b>
         </div>
         <div class="col text-end">
           per 100g
@@ -192,8 +187,8 @@ function renderMeal(name, diet, macroHtml, parentElem, ingredients) {
           </div>
         </div>
       </div>
-    
-      
+
+
     </div>
   </div>`;
 
