@@ -1,29 +1,29 @@
 // Copy range B12:K22 from the Sheets here
-let split = `lmay01A.5ef AMä	29	lyh04.4f VKo	21	läi05.6 JJu	27	lyh05.1ABI VKo	29	lmaa13.3ABI HNo	30
-lmay01A.3f HNo	30	lke07.1ABI HHu	15	läi05.4 HTe	26	lena09.5ABI RKo	30	lbi07.2ABI POj	25
-lmay01A.6ef PRu	31	lsaa03 JSn	11	läi05.1 TLy	22	lena09.4ABI PAu	23	lmaa05.5f PRu	23
-lke07.2ABI HHu	19	lhi05.1f SHi	28	ls205 MAl	16	lbi07.1ABI POj	15	lmaa05.3f NNu	30
-lhi01.1f SHi	30	lfy05.1fe JMa	31	lrua09.1ABI/lrub09.1ABI MPa	31	läi05.5 HTe	30	lmaa05.1f AMä	27
-lge01.4f MMe	31	let07.ABI/lue07.ABI NMä	11	lhi02.5ef SHi	32	läi05.2 JJu	31	lfi05.ABI LLa	8
-lfi02.1f EHä	32	lps01.6ef MiV	31	lfi02.2f LLa	31	lte01.3f OVi	36	let02.2ef VeA	32
-lena09.2ABI PSk	22	lena01+02.2 RKo	31	lena09.2ABI PSk	22	lrua09.1ABI/lrub09.1ABI MPa	31	lena09.1ABI RKo	33
-lena05.6 MHu	33	lbi04.3ef CFr	25	lena04.3 MHu	32	lmaa05.4f NNu	30	lmay01A.2f EMa	30
-				lbi01.4f ARa	26
-									`;
+let split = `läi10.1ABI HTe	29	lyh03.6fe ATa	26	lrub01+02.3 APa	27	lmaa06.4f/lmaa09.4f NNu	31	lmaa10.1f EHä	34
+läi01.6 STa	22	ls208 MAl	21	lrub01+02.1 MPa	26	lmaa10.3f HNo	29	lmaa06.5f/lmaa09.5f NNu	29
+läi01.1 JJu	21	lrub01+02.4 TNu	28	lrua01+02 MiV	14	lhi03.4fe SHi	30	läi08.3 HTe	28
+lyh03.4fe VKo	29	lhi03.2f SHi	27	läi10.6ABI HTe	29	lhi02.2f ATa	31	lyh03.2fe VKo	31
+lte01.1f ALa	31	lfy06.2fe JMa	21	läi08.5 JJu	28	lge01.3f MMe	32	lue02.1f NMä	31
+lena01+02.4 PSk	22	lena01+02.6 RKo	28	läi05.3 MHe	30	lfy08.2fe JMa	23	lsab207/lsab309 JSn	12
+ls201 MAl	26	lraa03 OVi	15	läi02+06.4 STa	23	lfi02.6ef LLa	30	lrub04.5 TNu	22
+lrub01+02.5 PAu	30	lps03.2ef LLa	29	lena05.2 PAu	29	lena05.5 MHu	28	lrua07 PAu	12
+lrub01+02.2 MPa	31	lmaa17.fe AMä	9	lfy09.e MSl	6	lena01+02.3 RKo	25	lena05.4 RKo	29
+lmab09.1f EMa	27			lfy08.3fe JMa	18	lsaa07 JSn	8	lbi01.5fe POj	26
+				lena05.1 PSk	31				`;
 
 // Copy range B27:K38 from the Sheets  here
-let normal = `lyh05.1ABI VKo	29	lli02.2fe JWi	26	lmu01.5e MMc	26	lps01.2f MiV	31	läi01.4 JJu	23
-lena09.5ABI RKo	30	lku02.1f EPe	25	lmu01.2e TTu	26	lke07.2ABI HHu	19	lyh01.5f ATa	31
-lena09.4ABI PAu	23	lyh01.3f ATa	31	lli01.6ef PBo	27	lhi01.1f SHi	30	lue02.3f NMä	32
-lbi07.1ABI POj	15	läi01.5 MHe	30	lku01.7ef KEs	27	lge01.4f MMe	31	lss201.1+2 MAl	1
-läi05.5 HTe	30	lrub09.2ABI MPa	22	lku01.1f EPe	26	lfi02.1f EHä	32	lrub04.2 JSn	31
-läi05.2 JJu	31	lena09.3ABI PSk	27	lke01+02.3f EMa	26	lmay01A.5ef AMä	29	lrub01+02.6 TNu	28
-lte01.3f OVi	36	lmay01A.4f AMä	31	lyh05.1ABI VKo	29	lmay01A.3f HNo	30	lrub01+02.3 APa	26
-lrua09.1ABI/lrub09.1ABI MPa	31	lmay01A.1f EMa	29	lena09.5ABI RKo	30	lmay01A.6ef PRu	31	lrub01+02.1 MPa	25
-lps01.2f MiV	31	leaa04 MHu	10	lbi07.1ABI POj	15	lena09.2ABI PSk	22	lrua01+02 MiV	16
-lmaa05.4f NNu	30			lena09.4ABI PAu	23	lena05.6 MHu	33	lraa08/lrab206/lrab308 IWi	18
-				lke07.2ABI HHu	19			lmab08.1f JMa	28
-									`;
+let normal = `lmaa06.4f/lmaa09.4f NNu	31	lmaa03.2f HNo	26	lmab09.2f NNu	26	läi10.1ABI HTe	29	lli01.2fe RKi	26
+lfy08.2fe JMa	23	läi02+06.3 MHe	33	lmaa10.4f AMä	19	läi01.6 STa	22	lku01.4f EPe	25
+lmaa10.3f HNo	29	lke03.3fe HHu	28	lke06.1fe HHu	22	läi01.1 JJu	21	lke01+02.6ef HHu	26
+lhi03.4fe SHi	30	lke03.2fe EMa	27	lps01.5ef LLa	29	lyh03.4fe VKo	29	lmu01.3e TTu	26
+lhi02.2f ATa	31	lsab203/lsab305 JSn	8	lrub01+02.6 TNu	30	lte01.1f ALa	31	lmu01.1e MMc	27
+lge01.3f MMe	32	läi08.4 HTe	25	lte01.6ef OVi	28	lena01+02.4 PSk	22	lmaa06.3f/lmaa09.3f PRu	22
+lfi02.6ef LLa	30	läi06.1/läi07.1 JJu	11	lss201.1+2 MAl	6	ls201 MAl	26	lmab04.2f JMa	26
+lena05.5 MHu	28	lrab203/lrab305 IWi	4	lyh03.3fe VKo	19	lrub01+02.5 PAu	30	lhi03.5ef ATa	31
+lena01+02.3 RKo	25	lena01+02.5 MHu	28	lyh01.2f ATa	31	lrub01+02.2 MPa	31	lfy01+02.7ef MSl	26
+lsaa07 JSn	8	lena01+02.1 PAu	27	lfi02.5ef EHä	29	lmab09.1f EMa	27	let02.1f LVä	27
+				lhi02.4f SHi	24
+				leaa07/leab207/leab309 SaT	14				`;
 
 /**
  * Transposes the given array, swapping columns and rows.

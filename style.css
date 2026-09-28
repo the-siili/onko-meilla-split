@@ -119,7 +119,6 @@ body {
     border: none;
     cursor: pointer;
     overflow: hidden;
-    outline: none;
     font-size: xx-large;
     color: var(--text-color);
 }
