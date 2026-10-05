@@ -11,7 +11,9 @@ Onko Meillä Split hakee myös koulun **ruokalistan**.
 ## Tekijät
 -  Leo Fabritius - Current maintainer
 
--  [Akseli Siili](https://github.com/the-siili/) - Functionality (JavaScript)
+- [Axel Karjalainen](https://axka.fi) - New features, bug fixes, code cleanup and updated lunches
 
--  [Alvar Oras](https://github.com/smoutof) - Front-End + API
+- [Akseli Siili](https://github.com/the-siili/) - Functionality (JavaScript)
+
+- [Alvar Oras](https://github.com/smoutof) - Front-End + API
 > *Nettisivun taustakuvan tehnyt Jaakko Kivikoski*
